@@ -43,23 +43,24 @@ export default (() => {
 			background="--color-lightD2"
 			lg-background="--color-lightD2"
 		>
-			<Override slot="SectionContent" flex-direction="row" md-flex-wrap="wrap" />
+			<Override slot="SectionContent" flex-direction="row" md-flex-wrap="wrap" border-radius="100px" />
 			<Box
 				width="50%"
 				display="flex"
 				flex-direction="column"
 				justify-content="center"
 				md-width="100%"
-				padding="0px 0px 0px 0px"
 				lg-padding="0px 30px 0px 0px"
 				md-padding="0px 0px 0px 0px"
 				md-margin="0px 0px 30px 0px"
 				align-items="center"
+				padding="0px 0px 0px 0px"
 			>
 				<Image
 					max-width="340px"
 					src="https://uploads.quarkly.io/666fda49fdcae00021e37362/images/portfolio.jpg?v=2024-06-17T07:37:20.066Z"
 					md-margin="0px 0px 20px 0px"
+					border-radius="100px"
 					srcSet="https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/portfolio.jpg?v=2024-06-17T07%3A37%3A20.066Z&quality=85&w=500 500w,https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/portfolio.jpg?v=2024-06-17T07%3A37%3A20.066Z&quality=85&w=800 800w,https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/portfolio.jpg?v=2024-06-17T07%3A37%3A20.066Z&quality=85&w=1080 1080w,https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/portfolio.jpg?v=2024-06-17T07%3A37%3A20.066Z&quality=85&w=1600 1600w,https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/portfolio.jpg?v=2024-06-17T07%3A37%3A20.066Z&quality=85&w=2000 2000w,https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/portfolio.jpg?v=2024-06-17T07%3A37%3A20.066Z&quality=85&w=2600 2600w,https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/portfolio.jpg?v=2024-06-17T07%3A37%3A20.066Z&quality=85&w=3200 3200w"
 					sizes="(max-width: 576px) 100vw,(max-width: 768px) 100vw,(max-width: 992px) 100vw,100vw"
 				/>
@@ -77,12 +78,12 @@ export default (() => {
 				<Text margin="0px 0px 40px 0px" color="--primary" font="--headline2" md-margin="0px 0px 30px 0px">
 					Juan Issac Hernandez Degollado
 				</Text>
-				<Text margin="0px 0px 40px 0px" color="--darkL2" font="--base">
+				<Text margin="0px 0px 40px 0px" color="--darkL2" font="--lead">
 					Hey! I guess you are here for the amazing marketing campaign I did. And you are looking for, probably,  a back-end developer.
 					<br />
 					I have many years of experience using Node.JS and I think I can help you in with your problems.
 				</Text>
-				<Text margin="0px 0px 0px 0px" color="--darkL2" font="--base">
+				<Text margin="0px 0px 0px 0px" color="--darkL2" font="--lead">
 					Apart of my strong background in Node.js, I've used different could platforms (Azure and AWS) with many services.
 					<br />
 				</Text>
