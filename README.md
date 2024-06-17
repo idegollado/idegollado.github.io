@@ -17,6 +17,11 @@
          alt="Create React App version" />
   </a>
   
+  <a href="https://github.com/idegollado/quarkly-profile/pulls">
+    <img src="https://badgen.net/github/prs/idegollado/quarkly-profile" alt="Pull Request Amount">
+  </a>
+  <img src="https://badgen.net/github/last-commit/idegollado/quarkly-profile" alt="Last commit date" />
+            
   <a href="./LICENSE">
     <img src="https://badgen.net/badge/license/MIT/blue"
          alt="License">

@@ -1,12 +1,9 @@
 import React from "react";
 import theme from "theme";
-import { Theme, Link, Icon, Text, LinkBox, Box, Section, Image, Input, Button } from "@quarkly/widgets";
+import { Theme, Link, Image, Text, Box, Section, List, Icon, LinkBox, Input, Button } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
 import { GlobalQuarklyPageStyles } from "global-page-styles";
-import { RawHtml, Override, SocialMedia, Formspree } from "@quarkly/components";
-import * as Components from "components";
-import { GiVanDammeSplit, GiFairyWings } from "react-icons/gi";
-import { FiMenu } from "react-icons/fi";
+import { RawHtml, Override, Formspree } from "@quarkly/components";
 import { MdLocationOn, MdEmail, MdPhone } from "react-icons/md";
 import { FaLinkedinIn } from "react-icons/fa";
 export default (() => {
@@ -19,216 +16,6 @@ export default (() => {
 			<meta name={"description"} content={"Web site created using quarkly.io"} />
 			<link rel={"shortcut icon"} href={"https://uploads.quarkly.io/readme/cra/favicon-32x32.ico"} type={"image/x-icon"} />
 		</Helmet>
-		<Section sm-padding="8px 0 8px 0" quarkly-title="Header-2">
-			<Override
-				slot="SectionContent"
-				flex-direction="column"
-				justify-content="space-between"
-				align-items="center"
-				lg-flex-direction="row"
-			/>
-			<Box
-				display="flex"
-				padding="12px 0 18px 0"
-				justify-content="center"
-				align-items="flex-start"
-				flex-direction="row"
-				width="100%"
-				sm-width="50%"
-				sm-align-items="center"
-				sm-flex-direction="row"
-				sm-justify-content="flex-start"
-				md-width="50%"
-				lg-width="70%"
-				md-justify-content="flex-start"
-				lg-justify-content="flex-start"
-			>
-				<LinkBox flex-direction="row" href="/index" display="flex" grid-gap="18px">
-					<Icon category="gi" icon={GiVanDammeSplit} color="#6d32ec" size="37px" />
-					<Text
-						margin="0"
-						md-margin="0px 0 0px 0"
-						text-align="left"
-						font="--headline3"
-						sm-margin="0px 0 0px 0"
-						display="block"
-					>
-						My Profile
-					</Text>
-				</LinkBox>
-			</Box>
-			<Components.QuarklycommunityKitMobileSidePanel
-				menuPosition="full"
-				breakpoint="lg"
-				width="100%"
-				sm-width="50%"
-				md-width="50%"
-				lg-width="30%"
-				justify-content="center"
-				lg-justify-content="flex-end"
-			>
-				<Override slot="Children" md-display="flex" />
-				<Override
-					slot="Content"
-					padding="0px 0px 0px 0px"
-					background="rgba(255, 255, 255, 0)"
-					lg-background="#ffffff"
-					lg-margin="0px 0px 0px 0px"
-				/>
-				<Override
-					slot="Button Text"
-					font="normal 600 16px/1.5 -apple-system, system-ui, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif"
-					text-transform="uppercase"
-					letter-spacing="1px"
-					sm-font="normal 600 14px/1.5 -apple-system, system-ui, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif"
-					sm-margin="0px 2px 0px 0px"
-					lg-margin="0px 0px 0px 0px"
-				/>
-				<Override
-					slot="Button Icon :closed"
-					category="fi"
-					icon={FiMenu}
-					size="32px"
-					padding="5px 7px 5px 7px"
-					border-radius="50px"
-				/>
-				<Override
-					slot="Button Icon"
-					width="28px"
-					height="28px"
-					category="fi"
-					icon={FiMenu}
-					color="--dark"
-					size="24px"
-					lg-width="32px"
-					lg-height="32px"
-				/>
-				<Override
-					slot="Cross"
-					lg-width="32px"
-					lg-height="32px"
-					size="32px"
-					top="24px"
-					right="24px"
-				/>
-				<Box
-					align-items="center"
-					lg-justify-content="center"
-					lg-align-items="flex-start"
-					justify-content="center"
-					display="flex"
-					lg-flex-direction="column"
-					lg-margin="0px auto 0px auto"
-					lg-min-width="300px"
-					lg-max-width="1280px"
-					lg-width="90%"
-					lg-padding="24px 0px 48px 0px"
-				>
-					<Box
-						display="none"
-						lg-width="100%"
-						lg-margin="0px 0px 24px 0px"
-						lg-display="flex"
-						lg-padding="12px 0px 12px 0px"
-					>
-						<LinkBox flex-direction="row" href="/index" display="flex" grid-gap="18px">
-							<Icon category="gi" icon={GiFairyWings} color="#6d32ec" size="37px" />
-							<Text
-								margin="0"
-								md-margin="0px 0 0px 0"
-								text-align="left"
-								font="--headline3"
-								sm-margin="0px 0 0px 0"
-								display="block"
-							>
-								Awesome Company
-							</Text>
-						</LinkBox>
-					</Box>
-					<Components.QuarklycommunityKitMenu
-						display="flex"
-						filterMode="exclude"
-						filterPages="/index"
-						grid-gap="8px"
-						lg-flex-direction="column"
-						lg-padding="6px 0px 6px 0px"
-						lg-margin="0px 0px 24px 0px"
-						align-items="center"
-						flex-wrap="wrap"
-						overflow-x="visible"
-						overflow-y="visible"
-						lg-align-items="flex-start"
-					>
-						<Override
-							slot="link"
-							color="--darkL2"
-							hover-color="--primary"
-							font="--lead"
-							text-decoration-line="initial"
-							transition="color 0.1s ease 0s"
-							lg-font="--lead"
-						/>
-						<Override slot="item-active" border-width={0} />
-						<Override slot="item" padding="6px 8px 6px 8px" />
-						<Override slot="link-active" cursor="default" color="--primary" />
-						<Override slot="link-about" />
-					</Components.QuarklycommunityKitMenu>
-					<Box
-						width="25%"
-						display="none"
-						lg-width="100%"
-						lg-flex-direction="column"
-						lg-align-items="flex-start"
-						lg-display="flex"
-						justify-content="space-around"
-						align-items="center"
-						flex-wrap="wrap"
-						lg-margin="0px 0px 0px 0px"
-					>
-						<Link
-							font="--lead"
-							padding="10px 0px 10px 0px"
-							margin="0px 0px 6px 0px"
-							href="tel:12345678"
-							text-decoration-line="initial"
-							color="--dark"
-							lg-margin="0px 0px 24px 0px"
-						>
-							+1(234)567-89-00
-						</Link>
-						<SocialMedia
-							instagram="https://instagram.com/instagram"
-							margin="0px 0px 0px 0px"
-							facebook="https://www.facebook.com/quarklyapp/"
-							youtube="https://www.youtube.com/channel/UCK5bXs2L0bbSMQ82BQ3hIkw"
-							lg-display="flex"
-							lg-grid-gap="12px"
-						>
-							<Override slot="link-twitter" margin="0px 0px 0px 5px">
-								<div />
-							</Override>
-							<Override
-								slot="link"
-								border-radius="50%"
-								background="transparent"
-								hover-color="--light"
-								display="flex"
-								margin="0 5px 0 5px"
-								padding="5x 5px 5px 5px"
-								width="32px"
-								height="32px"
-								align-items="center"
-								justify-content="center"
-							/>
-							<Override slot="icon" size="32px" border-radius="50px" color="--darkL2" />
-							<Override slot="link-facebook" margin="0px 5px 0px 0px">
-								<div />
-							</Override>
-						</SocialMedia>
-					</Box>
-				</Box>
-			</Components.QuarklycommunityKitMobileSidePanel>
-		</Section>
 		<Section
 			padding="80px 0 80px 0"
 			sm-padding="60px 0 60px 0"
@@ -281,222 +68,122 @@ export default (() => {
 				</Text>
 			</Box>
 		</Section>
-		<Section padding="80px 0 80px 0" lg-padding="60px 0 60px 0" md-padding="40px 0 40px 0" sm-padding="30px 0 30px 0">
+		<Section background="--color-darkL2" padding="60px 0" sm-padding="40px 0">
 			<Box
-				margin="0px 0px 32px 0px"
+				margin="-16px -16px -16px -16px"
+				padding="0px 0px 0px 0px"
 				display="flex"
-				flex-direction="column"
-				align-items="flex-start"
-				lg-align-items="center"
+				width=" "
+				flex-wrap="wrap"
 			>
-				<Text
-					font="--headline1"
-					color="--primary"
-					text-align="center"
-					md-font="normal 700 42px/1.2 &quot;Source Sans Pro&quot;, sans-serif"
-					margin="16px 0px 0px 0px"
-				>
-					Work Experience
-				</Text>
-				<Text font="--lead" color="--darkL2" max-width="600px">
-					This are some motives you need to hire me.
-				</Text>
+				<Box padding="16px 16px 16px 16px" display="flex" width="50%" lg-width="100%">
+					<Box
+						padding="98px 64px 98px 64px"
+						display="flex"
+						flex-direction="column"
+						background="--color-light"
+						color="--dark"
+					>
+						<Text
+							as="h4"
+							margin="12px 0"
+							font="--base"
+							color="--grey"
+							letter-spacing="1px"
+							text-transform="uppercase"
+						>
+							WORK experience
+						</Text>
+						<Text as="h2" margin="0 0 12px 0" font="--headline2" md-font="--headline3">
+							I have been worked for several companies:
+							<br />
+						</Text>
+						<List
+							margin="0px 0px 0px 0px"
+							padding="0px 0px 0px 20px"
+							list-style-type="disc"
+							as="ul"
+							font="--lead"
+						>
+							<Text margin="0px 0px 0px 0px">
+								The KSquare Group
+							</Text>
+							<Text margin="0px 0px 0px 0px">
+								Globant
+							</Text>
+							<Text margin="0px 0px 0px 0px">
+								Envia.com
+							</Text>
+							<Text margin="0px 0px 0px 0px">
+								Softtek
+							</Text>
+						</List>
+						<Text margin="0px 0px 0px 0px" font="--lead">
+							And I have learned a lot of all of them.
+						</Text>
+					</Box>
+				</Box>
+				<Box display="flex" width="50%" flex-wrap="wrap" lg-width="100%">
+					<Box
+						padding="16px 16px 16px 16px"
+						display="flex"
+						width="100%"
+						lg-width="33.3333%"
+						md-width="100%"
+						sm-width="100%"
+					>
+						<Box
+							padding="0px 0px 624px 0px"
+							display="flex"
+							flex-direction="column"
+							background="url(https://uploads.quarkly.io/666fda49fdcae00021e37362/images/ksquare.jpg?v=2024-06-17T07:55:07.271Z) center/cover"
+							width="100%"
+							lg-padding="0px 0px 248px 0px"
+							sm-padding="0px 0px 380px 0px"
+						/>
+					</Box>
+					<Box
+						padding="16px 16px 16px 16px"
+						display="flex"
+						width="50%"
+						lg-width="33.3333%"
+						md-width="50%"
+						sm-width="100%"
+						position="static"
+					>
+						<Box
+							padding="0px 0px 296px 0px"
+							display="flex"
+							flex-direction="column"
+							background="url(https://uploads.quarkly.io/666fda49fdcae00021e37362/images/globant.jpeg?v=2024-06-17T07:53:51.003Z) center/100%"
+							width="100%"
+							lg-padding="0px 0px 248px 0px"
+							sm-padding="0px 0px 380px 0px"
+							position="static"
+						/>
+					</Box>
+					<Box
+						padding="16px 16px 16px 16px"
+						display="flex"
+						width="50%"
+						lg-width="33.3333%"
+						md-width="50%"
+						sm-width="100%"
+					>
+						<Box
+							padding="0px 0px 296px 0px"
+							display="flex"
+							flex-direction="column"
+							background="url(https://uploads.quarkly.io/666fda49fdcae00021e37362/images/enviacom.png?v=2024-06-17T07:56:20.091Z) center/100%"
+							width="100%"
+							lg-padding="0px 0px 248px 0px"
+							sm-padding="0px 0px 380px 0px"
+						/>
+					</Box>
+				</Box>
 			</Box>
-			<LinkBox
-				display="flex"
-				margin="0px 0px 32px 0px"
-				md-flex-direction="column"
-				md-align-items="center"
-				md-justify-content="center"
-				flex-direction="row"
-				align-items="flex-start"
-				flex-wrap="wrap"
-				lg-margin="0px 0px 16px 0px"
-			>
-				<Box
-					width="60%"
-					padding="0px 16px 0px 0px"
-					align-items="flex-start"
-					display="flex"
-					justify-content="flex-start"
-					margin="0px 0px 0px 0px"
-					md-width="100%"
-					lg-width="100%"
-					lg-padding="0px 0px 0px 0px"
-				>
-					<Image
-						src="https://uploads.quarkly.io/666fda49fdcae00021e37362/images/ksquare.jpg?v=2024-06-17T07:55:07.271Z"
-						border-radius="24px"
-						max-width="100%"
-						width="100%"
-						object-fit="none"
-						lg-max-height="392px"
-						sm-max-height="213px"
-						max-height="fit-content"
-						srcSet="https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/ksquare.jpg?v=2024-06-17T07%3A55%3A07.271Z&quality=85&w=500 500w,https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/ksquare.jpg?v=2024-06-17T07%3A55%3A07.271Z&quality=85&w=800 800w,https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/ksquare.jpg?v=2024-06-17T07%3A55%3A07.271Z&quality=85&w=1080 1080w,https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/ksquare.jpg?v=2024-06-17T07%3A55%3A07.271Z&quality=85&w=1600 1600w,https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/ksquare.jpg?v=2024-06-17T07%3A55%3A07.271Z&quality=85&w=2000 2000w,https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/ksquare.jpg?v=2024-06-17T07%3A55%3A07.271Z&quality=85&w=2600 2600w,https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/ksquare.jpg?v=2024-06-17T07%3A55%3A07.271Z&quality=85&w=3200 3200w"
-						sizes="(max-width: 576px) 100vw,(max-width: 768px) 100vw,(max-width: 992px) 100vw,100vw"
-					/>
-				</Box>
-				<Box
-					width="40%"
-					padding="0px 0px 0px 16px"
-					display="flex"
-					align-items="flex-start"
-					justify-content="flex-start"
-					md-width="100%"
-					sm-align-items="flex-start"
-					sm-flex-direction="column"
-					sm-justify-content="flex-start"
-					flex-direction="column"
-					lg-width="100%"
-					lg-flex-direction="row"
-					lg-justify-content="space-between"
-					lg-padding="16px 12px 16px 12px"
-				>
-					<Text margin="0px 0px 16px 0px" font="--lead" color="--darkL2" opacity="0.5">
-						2023
-					</Text>
-					<Box padding="0px 50px 0px 0px" lg-width="70%" sm-width="100%" lg-padding="0px 0px 0px 0px">
-						<Text margin="0px 0px 8px 0px" font="--headline3" color="--dark">
-							ThekSquareGroup
-						</Text>
-						<Text margin="0px 0px 0px 0px" font="--lead" color="--darkL2">
-							Worked for TheKsquareGroup a company software consultancy. My main responsibilities were creating micro-services to provide new features for a customer web product.
-						</Text>
-					</Box>
-				</Box>
-			</LinkBox>
-			<LinkBox
-				display="flex"
-				margin="0px 0px 32px 0px"
-				md-flex-direction="column"
-				md-align-items="center"
-				md-justify-content="center"
-				flex-direction="row"
-				align-items="flex-start"
-				flex-wrap="wrap"
-				lg-margin="0px 0px 16px 0px"
-			>
-				<Box
-					width="60%"
-					padding="0px 16px 0px 0px"
-					align-items="flex-start"
-					display="flex"
-					justify-content="flex-start"
-					margin="0px 0px 0px 0px"
-					md-width="100%"
-					lg-width="100%"
-					lg-padding="0px 0px 0px 0px"
-					lg-height="fit-content"
-				>
-					<Image
-						src="https://uploads.quarkly.io/666fda49fdcae00021e37362/images/globant.jpeg?v=2024-06-17T07:53:51.003Z"
-						border-radius="24px"
-						max-width="100%"
-						width="100%"
-						object-fit="none"
-						lg-max-height="392px"
-						sm-max-height="213px"
-						max-height="fit-content"
-						srcSet="https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/globant.jpeg?v=2024-06-17T07%3A53%3A51.003Z&quality=85&w=500 500w,https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/globant.jpeg?v=2024-06-17T07%3A53%3A51.003Z&quality=85&w=800 800w,https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/globant.jpeg?v=2024-06-17T07%3A53%3A51.003Z&quality=85&w=1080 1080w,https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/globant.jpeg?v=2024-06-17T07%3A53%3A51.003Z&quality=85&w=1600 1600w,https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/globant.jpeg?v=2024-06-17T07%3A53%3A51.003Z&quality=85&w=2000 2000w,https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/globant.jpeg?v=2024-06-17T07%3A53%3A51.003Z&quality=85&w=2600 2600w,https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/globant.jpeg?v=2024-06-17T07%3A53%3A51.003Z&quality=85&w=3200 3200w"
-						sizes="(max-width: 576px) 100vw,(max-width: 768px) 100vw,(max-width: 992px) 100vw,100vw"
-					/>
-				</Box>
-				<Box
-					width="40%"
-					padding="0px 0px 0px 16px"
-					display="flex"
-					align-items="flex-start"
-					justify-content="flex-start"
-					md-width="100%"
-					sm-align-items="flex-start"
-					sm-flex-direction="column"
-					sm-justify-content="flex-start"
-					flex-direction="column"
-					lg-width="100%"
-					lg-flex-direction="row"
-					lg-justify-content="space-between"
-					lg-padding="16px 12px 16px 12px"
-				>
-					<Text margin="0px 0px 16px 0px" font="--lead" color="--darkL2" opacity="0.5">
-						2021
-					</Text>
-					<Box padding="0px 50px 0px 0px" lg-width="70%" lg-padding="0px 0px 0px 0px" sm-width="100%">
-						<Text margin="0px 0px 8px 0px" font="--headline3" color="--dark">
-							Globant
-						</Text>
-						<Text margin="0px 0px 0px 0px" font="--lead" color="--darkL2">
-							Developed micro-services within with a very interesting suite of Nest.js using mongobd as database.
-						</Text>
-					</Box>
-				</Box>
-			</LinkBox>
-			<LinkBox
-				display="flex"
-				margin="0px 0px 32px 0px"
-				md-flex-direction="column"
-				md-align-items="center"
-				md-justify-content="center"
-				flex-direction="row"
-				align-items="flex-start"
-				flex-wrap="wrap"
-				lg-margin="0px 0px 16px 0px"
-			>
-				<Box
-					width="60%"
-					padding="0px 16px 0px 0px"
-					align-items="flex-start"
-					display="flex"
-					justify-content="flex-start"
-					margin="0px 0px 0px 0px"
-					md-width="100%"
-					lg-width="100%"
-					lg-padding="0px 0px 0px 0px"
-				>
-					<Image
-						src="https://uploads.quarkly.io/666fda49fdcae00021e37362/images/enviacom.png?v=2024-06-17T07:56:20.091Z"
-						border-radius="24px"
-						max-width="100%"
-						max-height="456px"
-						width="100%"
-						object-fit="none"
-						lg-max-height="392px"
-						sm-max-height="213px"
-						srcSet="https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/enviacom.png?v=2024-06-17T07%3A56%3A20.091Z&quality=85&w=500 500w,https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/enviacom.png?v=2024-06-17T07%3A56%3A20.091Z&quality=85&w=800 800w,https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/enviacom.png?v=2024-06-17T07%3A56%3A20.091Z&quality=85&w=1080 1080w,https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/enviacom.png?v=2024-06-17T07%3A56%3A20.091Z&quality=85&w=1600 1600w,https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/enviacom.png?v=2024-06-17T07%3A56%3A20.091Z&quality=85&w=2000 2000w,https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/enviacom.png?v=2024-06-17T07%3A56%3A20.091Z&quality=85&w=2600 2600w,https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/enviacom.png?v=2024-06-17T07%3A56%3A20.091Z&quality=85&w=3200 3200w"
-						sizes="(max-width: 576px) 100vw,(max-width: 768px) 100vw,(max-width: 992px) 100vw,100vw"
-					/>
-				</Box>
-				<Box
-					width="40%"
-					padding="0px 0px 0px 16px"
-					display="flex"
-					align-items="flex-start"
-					justify-content="flex-start"
-					md-width="100%"
-					sm-align-items="flex-start"
-					sm-flex-direction="column"
-					sm-justify-content="flex-start"
-					flex-direction="column"
-					lg-width="100%"
-					lg-flex-direction="row"
-					lg-justify-content="space-between"
-					lg-padding="16px 12px 16px 12px"
-				>
-					<Text margin="0px 0px 16px 0px" font="--lead" color="--darkL2" opacity="0.5">
-						2019
-					</Text>
-					<Box padding="0px 50px 0px 0px" lg-width="70%" lg-padding="0px 0px 0px 0px" sm-width="100%">
-						<Text margin="0px 0px 8px 0px" font="--headline3" color="--dark">
-							Envia.com
-						</Text>
-						<Text margin="0px 0px 0px 0px" font="--lead" color="--darkL2">
-							Integrated new APIs for international careers.
-						</Text>
-					</Box>
-				</Box>
-			</LinkBox>
 		</Section>
-		<Section padding="80px 0 80px 0" lg-background="--color-lightD2" background="--color-lightD2">
+		<Section padding="80px 0 80px 0" lg-background="--color-lightD2">
 			<Box align-items="center" display="flex" justify-content="center" flex-direction="column">
 				<Text
 					margin="0px 0px 0px 0px"
@@ -553,13 +240,7 @@ export default (() => {
 					width="calc(100% / 6)"
 					md-width="calc(100% / 3)"
 				>
-					<Image
-						src="https://uploads.quarkly.io/666fda49fdcae00021e37362/images/icons8-typescript-100.png?v=2024-06-17T08:05:48.691Z"
-						border-radius="16px"
-						max-width="100%"
-						srcSet="https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/icons8-typescript-100.png?v=2024-06-17T08%3A05%3A48.691Z&quality=85&w=500 500w,https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/icons8-typescript-100.png?v=2024-06-17T08%3A05%3A48.691Z&quality=85&w=800 800w,https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/icons8-typescript-100.png?v=2024-06-17T08%3A05%3A48.691Z&quality=85&w=1080 1080w,https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/icons8-typescript-100.png?v=2024-06-17T08%3A05%3A48.691Z&quality=85&w=1600 1600w,https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/icons8-typescript-100.png?v=2024-06-17T08%3A05%3A48.691Z&quality=85&w=2000 2000w,https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/icons8-typescript-100.png?v=2024-06-17T08%3A05%3A48.691Z&quality=85&w=2600 2600w,https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/icons8-typescript-100.png?v=2024-06-17T08%3A05%3A48.691Z&quality=85&w=3200 3200w"
-						sizes="(max-width: 576px) 100vw,(max-width: 768px) 100vw,(max-width: 992px) 100vw,100vw"
-					/>
+					<Image src="https://uploads.quarkly.io/666fda49fdcae00021e37362/images/icons8-typescript.svg?v=2024-06-17T11:56:20.635Z" border-radius="16px" max-width="100%" />
 				</Box>
 				<Box
 					position="relative"
@@ -572,13 +253,7 @@ export default (() => {
 					width="calc(100% / 6)"
 					md-width="calc(100% / 3)"
 				>
-					<Image
-						src="https://uploads.quarkly.io/666fda49fdcae00021e37362/images/icons8-azure-96.png?v=2024-06-17T08:08:51.888Z"
-						border-radius="16px"
-						max-width="100%"
-						srcSet="https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/icons8-azure-96.png?v=2024-06-17T08%3A08%3A51.888Z&quality=85&w=500 500w,https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/icons8-azure-96.png?v=2024-06-17T08%3A08%3A51.888Z&quality=85&w=800 800w,https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/icons8-azure-96.png?v=2024-06-17T08%3A08%3A51.888Z&quality=85&w=1080 1080w,https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/icons8-azure-96.png?v=2024-06-17T08%3A08%3A51.888Z&quality=85&w=1600 1600w,https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/icons8-azure-96.png?v=2024-06-17T08%3A08%3A51.888Z&quality=85&w=2000 2000w,https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/icons8-azure-96.png?v=2024-06-17T08%3A08%3A51.888Z&quality=85&w=2600 2600w,https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/icons8-azure-96.png?v=2024-06-17T08%3A08%3A51.888Z&quality=85&w=3200 3200w"
-						sizes="(max-width: 576px) 100vw,(max-width: 768px) 100vw,(max-width: 992px) 100vw,100vw"
-					/>
+					<Image src="https://uploads.quarkly.io/666fda49fdcae00021e37362/images/icons8-azure-48.svg?v=2024-06-17T11:55:15.432Z" border-radius="16px" max-width="100%" />
 				</Box>
 				<Box
 					position="relative"
@@ -591,13 +266,7 @@ export default (() => {
 					width="calc(100% / 6)"
 					md-width="calc(100% / 3)"
 				>
-					<Image
-						src="https://uploads.quarkly.io/666fda49fdcae00021e37362/images/icons8-react-90.png?v=2024-06-17T08:07:44.503Z"
-						border-radius="16px"
-						max-width="100%"
-						srcSet="https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/icons8-react-90.png?v=2024-06-17T08%3A07%3A44.503Z&quality=85&w=500 500w,https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/icons8-react-90.png?v=2024-06-17T08%3A07%3A44.503Z&quality=85&w=800 800w,https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/icons8-react-90.png?v=2024-06-17T08%3A07%3A44.503Z&quality=85&w=1080 1080w,https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/icons8-react-90.png?v=2024-06-17T08%3A07%3A44.503Z&quality=85&w=1600 1600w,https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/icons8-react-90.png?v=2024-06-17T08%3A07%3A44.503Z&quality=85&w=2000 2000w,https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/icons8-react-90.png?v=2024-06-17T08%3A07%3A44.503Z&quality=85&w=2600 2600w,https://smartuploads.quarkly.io/666fda49fdcae00021e37362/images/icons8-react-90.png?v=2024-06-17T08%3A07%3A44.503Z&quality=85&w=3200 3200w"
-						sizes="(max-width: 576px) 100vw,(max-width: 768px) 100vw,(max-width: 992px) 100vw,100vw"
-					/>
+					<Image src="https://uploads.quarkly.io/666fda49fdcae00021e37362/images/icons8-react.svg?v=2024-06-17T11:57:39.023Z" border-radius="16px" max-width="100%" />
 				</Box>
 				<Box
 					position="relative"
