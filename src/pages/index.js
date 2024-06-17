@@ -1,9 +1,10 @@
 import React from "react";
 import theme from "theme";
-import { Theme, Link, Text, Section, Image, Box, List, Icon, LinkBox, Input, Button } from "@quarkly/widgets";
+import { Theme, Link, Text, Section, Image, Box, Icon, LinkBox, Input, Button } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
 import { GlobalQuarklyPageStyles } from "global-page-styles";
 import { RawHtml, Override, Formspree } from "@quarkly/components";
+import * as Components from "components";
 import { MdLocationOn, MdEmail, MdPhone } from "react-icons/md";
 import { FaLinkedinIn } from "react-icons/fa";
 export default (() => {
@@ -116,32 +117,19 @@ export default (() => {
 						>
 							WORK experience
 						</Text>
-						<Text as="h2" margin="0 0 12px 0" font="--headline2" md-font="--headline3">
-							I have been worked for several companies:
+						<Components.QuarklycommunityKitLoopText slides="Envia.com,Softtek,Globant,The KSquare Group" min-height="250px" max-height="fit-content">
+							<Override slot="Before Text">
+								I have work for
+							</Override>
+							<Override slot="After Text">
+								.
+							</Override>
+						</Components.QuarklycommunityKitLoopText>
+						<Text margin="0px 0px 0px 0px" min-height="100px">
+							I have worked with many teams using scrum, different technologies, for example, a CORE API where every endpoint is there or a micro-service with Node.JS and express or NEST. Using REST API or Messages.
 							<br />
-						</Text>
-						<List
-							margin="0px 0px 0px 0px"
-							padding="0px 0px 0px 20px"
-							list-style-type="disc"
-							as="ul"
-							font="--lead"
-						>
-							<Text margin="0px 0px 0px 0px">
-								The KSquare Group
-							</Text>
-							<Text margin="0px 0px 0px 0px">
-								Globant
-							</Text>
-							<Text margin="0px 0px 0px 0px">
-								Envia.com
-							</Text>
-							<Text margin="0px 0px 0px 0px">
-								Softtek
-							</Text>
-						</List>
-						<Text margin="0px 0px 0px 0px" font="--lead">
-							And I have learned a lot of all of them.
+							<br />
+							Implementing testing using Jest in the process.
 						</Text>
 					</Box>
 				</Box>
