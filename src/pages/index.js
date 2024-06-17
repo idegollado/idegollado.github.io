@@ -119,7 +119,7 @@ export default (() => {
 						</Text>
 						<Components.QuarklycommunityKitLoopText slides="Envia.com,Softtek,Globant,The KSquare Group" min-height="250px" max-height="fit-content">
 							<Override slot="Before Text">
-								I have work for
+								I have worked for
 							</Override>
 							<Override slot="After Text">
 								.
