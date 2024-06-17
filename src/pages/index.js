@@ -1,6 +1,6 @@
 import React from "react";
 import theme from "theme";
-import { Theme, Link, Image, Text, Box, Section, List, Icon, LinkBox, Input, Button } from "@quarkly/widgets";
+import { Theme, Link, Text, Section, Image, Box, List, Icon, LinkBox, Input, Button } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
 import { GlobalQuarklyPageStyles } from "global-page-styles";
 import { RawHtml, Override, Formspree } from "@quarkly/components";
@@ -16,6 +16,26 @@ export default (() => {
 			<meta name={"description"} content={"Web site created using quarkly.io"} />
 			<link rel={"shortcut icon"} href={"https://uploads.quarkly.io/readme/cra/favicon-32x32.ico"} type={"image/x-icon"} />
 		</Helmet>
+		<Section
+			text-align="center"
+			background-color="--primary"
+			color="--light"
+			padding="80px 0"
+			sm-padding="40px 0"
+		>
+			<Text
+				as="h5"
+				font="--lead"
+				margin="10px 0 0 0"
+				text-transform="uppercase"
+				letter-spacing="5px"
+			>
+				Personal profile
+			</Text>
+			<Text as="h1" font="--headline1" md-font="--headline2" margin="10px 0 0 0">
+				Hey! I'm a Node.JS Developer
+			</Text>
+		</Section>
 		<Section
 			padding="80px 0 80px 0"
 			sm-padding="60px 0 60px 0"
@@ -55,10 +75,10 @@ export default (() => {
 				md-width="100%"
 			>
 				<Text margin="0px 0px 40px 0px" color="--primary" font="--headline2" md-margin="0px 0px 30px 0px">
-					Hey! I’m Node.js Developer
+					Juan Issac Hernandez Degollado
 				</Text>
 				<Text margin="0px 0px 40px 0px" color="--darkL2" font="--base">
-					Hey! I guess you are here for my amazing marketing campaign. And you are searching, probably, for a back-end developer.
+					Hey! I guess you are here for the amazing marketing campaign I did. And you are looking for, probably,  a back-end developer.
 					<br />
 					I have many years of experience using Node.JS and I think I can help you in with your problems.
 				</Text>
@@ -68,7 +88,8 @@ export default (() => {
 				</Text>
 			</Box>
 		</Section>
-		<Section background="--color-darkL2" padding="60px 0" sm-padding="40px 0">
+		<Section background="--color-darkL2" padding="60px 0" sm-padding="40px 0" color="--primary">
+			<Override slot="SectionContent" color="--primary" />
 			<Box
 				margin="-16px -16px -16px -16px"
 				padding="0px 0px 0px 0px"
